@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Number Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Number Page</h1>
+    <p>The number is: <span id="number">15</span></p>
+    <button onclick="changeNumber()">Change Number</button>
+
+    <script>
+        function changeNumber() {
+            const numberElement = document.getElementById("number");
+            let currentNumber = parseInt(numberElement.textContent);
+            currentNumber += 1; // Increment the number by 1
+            numberElement.textContent = currentNumber;
+        }
+    </script>
+</body>
+</html>
